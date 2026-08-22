@@ -9,7 +9,7 @@ class Solution {
         for (int sum = 0; sum < m + n - 1; sum++) {
 
             if (sum % 2 == 0) {
-                // Move upward-right
+ 
                 int row = Math.min(sum, m - 1);
                 int col = sum - row;
 
@@ -20,7 +20,7 @@ class Solution {
                 }
 
             } else {
-                // Move downward-left
+              
                 int col = Math.min(sum, n - 1);
                 int row = sum - col;
 
