@@ -6,12 +6,12 @@ class Solution {
         int[] result = new int[m * n];
         int index = 0;
 
-        for (int sum = 0; sum < m + n - 1; sum++) {
+        for (int i = 0; i < m + n - 1; i++) {
 
-            if (sum % 2 == 0) {
+            if (i% 2 == 0) {
  
-                int row = Math.min(sum, m - 1);
-                int col = sum - row;
+                int row = Math.min(i, m - 1);
+                int col = i - row;
 
                 while (row >= 0 && col < n) {
                     result[index++] = mat[row][col];
@@ -21,8 +21,8 @@ class Solution {
 
             } else {
               
-                int col = Math.min(sum, n - 1);
-                int row = sum - col;
+                int col = Math.min(i, n - 1);
+                int row = i- col;
 
                 while (row < m && col >= 0) {
                     result[index++] = mat[row][col];
