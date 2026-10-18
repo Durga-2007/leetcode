@@ -39,7 +39,10 @@ class Solution {
                             left++;
                         }
 
-                        
+                        while (left < right &&
+                               nums[right] == nums[right + 1]) {
+                            right--;
+                        }
                     } else if (sum < target) {
                         left++;
                     } else {
